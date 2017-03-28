@@ -35,6 +35,7 @@
             this.NotifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.NotifyIconContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.websiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.separatorToolStripMenuItem = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.WebsiteLink = new System.Windows.Forms.LinkLabel();
@@ -44,7 +45,7 @@
             this.StatusLabel = new System.Windows.Forms.Label();
             this.BlockBannersCheckbox = new System.Windows.Forms.CheckBox();
             this.StartupCheckbox = new System.Windows.Forms.CheckBox();
-            this.websiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mutedMusicPathTextBox = new System.Windows.Forms.TextBox();
             this.NotifyIconContextMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -81,24 +82,31 @@
             this.separatorToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.NotifyIconContextMenu.Name = "NotifyIconContextMenu";
-            this.NotifyIconContextMenu.Size = new System.Drawing.Size(153, 98);
+            this.NotifyIconContextMenu.Size = new System.Drawing.Size(117, 76);
             // 
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.openToolStripMenuItem.Text = "Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
+            // 
+            // websiteToolStripMenuItem
+            // 
+            this.websiteToolStripMenuItem.Name = "websiteToolStripMenuItem";
+            this.websiteToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.websiteToolStripMenuItem.Text = "Website";
+            this.websiteToolStripMenuItem.Click += new System.EventHandler(this.websiteToolStripMenuItem_Click);
             // 
             // separatorToolStripMenuItem
             // 
             this.separatorToolStripMenuItem.Name = "separatorToolStripMenuItem";
-            this.separatorToolStripMenuItem.Size = new System.Drawing.Size(149, 6);
+            this.separatorToolStripMenuItem.Size = new System.Drawing.Size(113, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.exitToolStripMenuItem.Text = "&Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -172,18 +180,19 @@
             this.StartupCheckbox.UseVisualStyleBackColor = true;
             this.StartupCheckbox.CheckedChanged += new System.EventHandler(this.StartupCheckbox_CheckedChanged);
             // 
-            // websiteToolStripMenuItem
+            // mutedMusicPathTextBox
             // 
-            this.websiteToolStripMenuItem.Name = "websiteToolStripMenuItem";
-            this.websiteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.websiteToolStripMenuItem.Text = "Website";
-            this.websiteToolStripMenuItem.Click += new System.EventHandler(this.websiteToolStripMenuItem_Click);
+            this.mutedMusicPathTextBox.Location = new System.Drawing.Point(12, 196);
+            this.mutedMusicPathTextBox.Name = "mutedMusicPathTextBox";
+            this.mutedMusicPathTextBox.Size = new System.Drawing.Size(212, 20);
+            this.mutedMusicPathTextBox.TabIndex = 12;
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(230, 139);
+            this.ClientSize = new System.Drawing.Size(237, 228);
+            this.Controls.Add(this.mutedMusicPathTextBox);
             this.Controls.Add(this.StartupCheckbox);
             this.Controls.Add(this.BlockBannersCheckbox);
             this.Controls.Add(this.StatusLabel);
@@ -224,6 +233,7 @@
         private System.Windows.Forms.ToolStripSeparator separatorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem websiteToolStripMenuItem;
+        private System.Windows.Forms.TextBox mutedMusicPathTextBox;
     }
 }
 

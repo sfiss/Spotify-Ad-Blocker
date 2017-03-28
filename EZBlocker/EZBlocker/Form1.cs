@@ -14,6 +14,7 @@ namespace EZBlocker
 {
     public partial class Main : Form
     {
+        private Process mutedMusicPlayer;
         private bool muted = false;
         private bool spotifyMute = false;
         private float volume = 0.9f;
@@ -207,6 +208,25 @@ namespace EZBlocker
                         //sessions[sid].SimpleAudioVolume.Mute = muted;
                     }
                 }
+
+
+                // New: Play music if muted, stop that if unmuted
+                if(muted)
+                {
+                    Process process = new Process();
+                    ProcessStartInfo startInfo = new ProcessStartInfo();
+                    startInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                    startInfo.FileName = this.mutedMusicPathTextBox.Text;
+                    startInfo.Arguments = null;
+                    process.StartInfo = startInfo;
+                    process.Start(); // System.Diagnostics.Process.Start()
+                    mutedMusicPlayer = process;
+                } else
+                {
+                    if (mutedMusicPlayer != null)
+                        mutedMusicPlayer.Kill();
+                }
+                
             }
             else // Mute all of Windows
             {
